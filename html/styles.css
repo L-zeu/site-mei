@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    width: 100vw;
+    height: 12vh;
+    background-color: #1E4A91;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.header .logo {
+    width: 10vw;
+    height: auto;
+    position: absolute;
+    top: -4vh;
+    left: 1vw;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.search-container input[type="text"] {
+    width: 36vw;
+    height: 6vh;
+    padding: 0.5vh 1vw;
+    font-size: 2vh;
+    border-radius: 8px 0 0 0;
+    border: 1px solid #ccc;
+}
+
+.header button {
+    width: 12vw;
+    height: 6vh;
+    padding: 1vh 2vw;
+    font-size: 2vh;
+    border: none;
+    border-radius: 16px 0 0 0;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    right: 1vw;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero .hero-image {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+}
+
+.hero .title {
+    width: 80vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4vh;
+    font-weight: bold;
+    color: black;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 2vw;
+    }
+
+    .header .logo {
+        position: static;
+        width: 30vw;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-bottom: 2vh;
+    }
+
+    .search-container input[type="text"] {
+        width: 80vw;
+    }
+
+    .header button {
+        width: 80vw;
+        margin: 0 auto 2vh auto;
+        position: static;
+    }
+
+    .hero .title {
+        width: 90vw;
+        font-size: 6vh;
+    }
+}
+
+@media (max-width: 480px) 
+    .header .logo {
+        width: 40vw;
+    }
+
+    .search-container input[type="text"] {
+        width: 90vw;
+    }
+
+    .header button {
+        width: 90vw;
+    }
+
+    .hero .title {
+        width: 90vw;
+        font-size: 5vh;
+    }
+
+
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
+}
+.meuslide {
+    display: none;
+}
+img{
+    width: 20px;
+    height: 10px;
+}
+.prev .next {
+    cursor: pointer;
+    position: absolute;
+    top: -200px;
+    width: auto;
+    padding: 16px;
+    margin-top: 2200px;
+    color: white;
+    font-weight: bold;
+    font-size: 100px;
+    transition: 0.6s ease;
+    border-radius: 10 3px 3px 10;
+    user-select: none;
+
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+
+}
+.prev:hover, .next:hover{ background-color: rgba(0,  0,  0, 8);}
